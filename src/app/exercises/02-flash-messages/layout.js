@@ -1,11 +1,15 @@
 import React from 'react';
-
+import ToastProvider from '@/c/ToastProvider';
 import './styles.css';
 
 function FlashMsgLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ToastProvider>
+          {children}
+        </ToastProvider>
+      </body>
     </html>
   );
 }
